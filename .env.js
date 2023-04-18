@@ -24,8 +24,17 @@ async function uploadFile(file) {
 }
 
 const files = [
-  { originalname: 'nome-do-arquivo.dwg', path: '/caminho/do/arquivo/nome-do-arquivo.dwg' },
+  { originalname: 'projeto1.dwg', path: '/caminho/do/arquivo/projeto1.dwg' },
+  { originalname: 'projeto2.jpg', path: '/caminho/do/arquivo/projeto2.jpg' },
+  { originalname: 'projeto3.dwg', path: '/caminho/do/arquivo/projeto3.dwg' },
   // adicione quantos arquivos quiser
 ];
+
+const dwgFiles = files.filter((file) => {
+  return file.originalname.endsWith('.dwg');
+});
+
+dwgFiles.forEach(uploadFile);
+
 
 files.forEach(uploadFile);
