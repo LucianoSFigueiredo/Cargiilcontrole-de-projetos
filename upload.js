@@ -22,3 +22,23 @@ const files = [
 ];
 
 
+const axios = require('axios');
+
+async function handleFileUpload() {
+  const fileInput = document.getElementById('file-input');
+  const files = fileInput.files;
+  const formData = new FormData();
+
+  for (let i = 0; i < files.length; i++) {
+    formData.append('file', files[i]);
+  }
+
+  try {
+    await axios.post('/upload', formData);
+    console.log('Arquivos enviados com sucesso!');
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+document.getElementById('submit-button').addEventListener('click', handleFileUpload);
