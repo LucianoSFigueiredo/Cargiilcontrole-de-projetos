@@ -2,6 +2,8 @@ GOOGLE_APPLICATION_CREDENTIALS=/Cargiilcontrole-de-projetos/woven-backbone-38370
 BUCKET_NAME=cargill-porto-franco
 require('dotenv').config(); // Carrega as variáveis de ambiente do arquivo .env
 
+
+
 const { Storage } = require('@google-cloud/storage');
 
 const storage = new Storage({
@@ -15,14 +17,14 @@ async function uploadFile(file) {
     gzip: true,
     metadata: {
       cacheControl: 'public, max-age=31536000',
+      contentType: 'application/acad'
     },
   });
   console.log(`${file.originalname} uploaded to ${bucketName}.`);
 }
 
 const files = [
-  { originalname: 'nome-do-arquivo-1.extensao', path: '/caminho/do/arquivo/nome-do-arquivo-1.extensao' },
-  { originalname: 'nome-do-arquivo-2.extensao', path: '/caminho/do/arquivo/nome-do-arquivo-2.extensao' },
+  { originalname: 'nome-do-arquivo.dwg', path: '/caminho/do/arquivo/nome-do-arquivo.dwg' },
   // adicione quantos arquivos quiser
 ];
 
