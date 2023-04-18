@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Controle de Aprovações de Projetos de Engenharia</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Controle de Aprovações de Projetos de Engenharia</h1>
+
+	
+
+	<div>
+		<h2>Arquivos para Aprovação</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Nome do Arquivo</th>
+					<th>Número do Desenho</th>
+					<th>Data de Carregamento</th>
+					<th>Etapa 1: Aprovação pela primeira instância</th>
+					<th>Etapa 2: Aprovação pela segunda instância</th>
+					<th>Etapa 3: Aprovação pela terceira instância</th>
+					<th>Etapa 4: Aprovação pela quarta instância</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Nome do Arquivo 1</td>
+					<td>Número do Desenho 1</td>
+					<td>Data 1</td>
+                    <td>
+                      
+                        <p><form action="/upload" method="post" enctype="multipart/form-data">
+							<label for="file-upload">Carregue o arquivo:</label>
+							<input type="file" id="file-upload" name="file-upload" multiple>
+							<input type="submit" value="Enviar">
+						  </form>
+						  
+                          
+                        </p>
+                 
+                    </td>
+					<td>
+						<p>Status: <span id="etapa1-status-1">Aguardando aprovação</span></p>
+						<p><button id="etapa1-aprovar-1" disabled>Aprovar</button> <button id="etapa1-reprovar-1" disabled>Reprovar</button></p>
+						<p><a id="etapa1-download-1" href="#" download disabled>Download do arquivo aprovado</a></p>
+					</td>
+					<td>
+						<p>Status: <span id="etapa2-status-1">Aguardando aprovação</span></p>
+						<p><button id="etapa2-aprovar-1" disabled>Aprovar</button> <button id="etapa2-reprovar-1" disabled>Reprovar</button></p>
+						<p><a id="etapa2-download-1" href="#" download disabled>Download do arquivo aprovado</a></p>
+					</td>
+					<td>
+						<p>Status: <span id="etapa3-status-1">Aguardando aprovação</span></p>
+						<p><button id="etapa3-aprovar-1" disabled>Aprovar</button> <button id="etapa3-reprovar-1" disabled>Reprovar</button></p>
+						<p><a id="etapa3-download-1" href="#" download disabled>Download do arquivo aprovado</a></p>
+					</td>
+					<td>
+						<p>Status: <span id="etapa4-status-1">Aguardando aprovação</span></p>
+						<p><button id="etapa4-aprovar-1" disabled>Aprovar</button> <button id="etapa4-reprovar-1" disabled>Reprovar</button></p>
+                        <p><a id="etapa4-download-1" href="#" download disabled>Download do arquivo aprovado</a></p>
+                        </td>
+                        </tr>
+                        <tr>
+                    </td>
+                        <!-- Adicione mais linhas para mais arquivos -->
+                        </tbody>
+                        </table>
+                     
+                        <script src="etapa1.js"></script>
+                        <script src="etapa2.js"></script>
+                        <script src="etapa3.js"></script>
+                        <script src="etapa4.js"></script>
+                        <script src="main.js"></script>
+						<script src="upload.js"></script>
+						<script src=".env.js"></script>
+                      
+</body>
+</html>

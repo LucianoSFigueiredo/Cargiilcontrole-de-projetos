@@ -21,4 +21,4 @@ const files = [
   // adicione quantos arquivos quiser
 ];
 
-uploadFiles(files);
+
