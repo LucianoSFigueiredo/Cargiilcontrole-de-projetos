@@ -1,5 +1,5 @@
 const { Storage } = require('@google-cloud/storage');
-const storage = new Storage();
+const storage = new Storage({ keyFilename: './google-creds.json' });
 const bucketName = 'cargill-porto-franco';
 
 async function uploadFiles(files) {
