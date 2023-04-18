@@ -7,8 +7,6 @@
 <body>
 	<h1>Controle de Aprovações de Projetos de Engenharia</h1>
 
-	
-
 	<div>
 		<h2>Arquivos para Aprovação</h2>
 		<table>
@@ -28,18 +26,13 @@
 					<td>Nome do Arquivo 1</td>
 					<td>Número do Desenho 1</td>
 					<td>Data 1</td>
-                    <td>
-                      
-                        <p><form action="/upload" method="post" enctype="multipart/form-data">
+					<td>
+						<form action="/upload" method="post" enctype="multipart/form-data">
 							<label for="file-upload">Carregue o arquivo:</label>
 							<input type="file" id="file-upload" name="file-upload" multiple>
 							<input type="submit" value="Enviar">
-						  </form>
-						  
-                          
-                        </p>
-                 
-                    </td>
+						</form>
+					</td>
 					<td>
 						<p>Status: <span id="etapa1-status-1">Aguardando aprovação</span></p>
 						<p><button id="etapa1-aprovar-1" disabled>Aprovar</button> <button id="etapa1-reprovar-1" disabled>Reprovar</button></p>
@@ -58,22 +51,25 @@
 					<td>
 						<p>Status: <span id="etapa4-status-1">Aguardando aprovação</span></p>
 						<p><button id="etapa4-aprovar-1" disabled>Aprovar</button> <button id="etapa4-reprovar-1" disabled>Reprovar</button></p>
-                        <p><a id="etapa4-download-1" href="#" download disabled>Download do arquivo aprovado</a></p>
-                        </td>
-                        </tr>
-                        <tr>
-                    </td>
-                        <!-- Adicione mais linhas para mais arquivos -->
-                        </tbody>
-                        </table>
-                     
-                        <script src="etapa1.js"></script>
-                        <script src="etapa2.js"></script>
-                        <script src="etapa3.js"></script>
-                        <script src="etapa4.js"></script>
-                        <script src="main.js"></script>
-						<script src="upload.js"></script>
-						<script src=".env.js"></script>
-                      
+<p><a id="etapa4-download-1" href="#" download disabled>Download do arquivo aprovado</a></p>
+</td>
+</tr>
+<!-- Adicione mais linhas para mais arquivos -->
+</tbody>
+</table>
+</div>
+
+
+<script src="etapa1.js"></script>
+<script src="etapa2.js"></script>
+<script src="etapa3.js"></script>
+<script src="etapa4.js"></script>
+<script src="main.js"></script>
+<script src="upload.js"></script>
 </body>
 </html>
+
+
+
+
+
