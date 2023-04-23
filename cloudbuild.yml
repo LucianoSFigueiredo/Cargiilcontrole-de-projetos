@@ -1,0 +1,16 @@
+steps:
+# Clonar o repositório do GitHub
+- name: 'gcr.io/cloud-builders/git'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    git clone --depth 1 https://github.com/LucianoSFigueiredo/Cargiilcontrole-de-projetos.git /workspace/Cargiilcontrole-de-projetos
+
+# Transferir arquivos para o bucket
+- name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    gsutil rsync -r /workspace/Cargiilcontrole-de-projetos gs://cargill-porto-franco
