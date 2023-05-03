@@ -3,10 +3,13 @@
 <head>
 	<title>Controle de Aprovações de Projetos de Engenharia</title>
 	<link rel="stylesheet" href="style.css">
+	
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
 	<h1>Controle de Aprovações de Projetos de Engenharia</h1>
+	  <input type="file" id="file-input" multiple>
+  <button id="submit-button">Enviar Arquivos</button>
 
 	<div>
 		<h2>Arquivos para Aprovação</h2>
@@ -87,6 +90,28 @@
 <script src="etapa4.js"></script>
 <script src="main.js"></script>
 <script src="upload.js"></script>
+								  <script>
+							    async function handleFileUpload() {
+							      const fileInput = document.getElementById('file-input');
+							      const files = fileInput.files;
+							      const formData = new FormData();
+
+							      for (let i = 0; i < files.length; i++) {
+								formData.append('file', files[i]);
+							      }
+
+							      try {
+								await axios.post('http://localhost:3000/upload', formData, {
+								  headers: { 'Content-Type': 'multipart/form-data' }
+								});
+								console.log('Arquivos enviados com sucesso!');
+							      } catch (error) {
+								console.error(error);
+							      }
+							    }
+
+							    document.getElementById('submit-button').addEventListener('click', handleFileUpload);
+							  </script>	
 </body>
 </html>
 
