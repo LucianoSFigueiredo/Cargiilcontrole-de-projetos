@@ -3,6 +3,7 @@
 <head>
 	<title>Controle de Aprovações de Projetos de Engenharia</title>
 	<link rel="stylesheet" href="style.css">
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
 	<h1>Controle de Aprovações de Projetos de Engenharia</h1>
@@ -10,16 +11,6 @@
 	<div>
 		<h2>Arquivos para Aprovação</h2>
 		<table>
-				<td>
-						<form action="/upload" method="post" enctype="multipart/form-data">
-							<label for="file-upload">Carregue o arquivo:</label>
-							<input type="file" id="file-upload" name="file-upload" multiple>
-							<input type="submit" value="Enviar">
-						    <button id="submit-button">Enviar arquivos</button>
-
-
-						</form>
-					</td>
 			<thead>
 				<tr>
 					<th>Nome do Arquivo</th>
@@ -32,7 +23,6 @@
 				</tr>
 			</thead>
 			<tbody>
-			
 				<tr>
 					<td>Nome do Arquivo 1</td>
 					<td>Número do Desenho 1</td>
@@ -56,14 +46,40 @@
 					<td>
 						<p>Status: <span id="etapa4-status-1">Aguardando aprovação</span></p>
 						<p><button id="etapa4-aprovar-1" disabled>Aprovar</button> <button id="etapa4-reprovar-1" disabled>Reprovar</button></p>
-<p><a id="etapa4-download-1" href="#" download disabled>Download do arquivo aprovado</a></p>
-</td>
+						<p><a id="etapa4-download-1" href="#" download disabled>Download do arquivo aprovado</a></p>
+					</td>
+				</tr>
+				<!-- Adicione mais linhas<!-- ... -->
+<tr>
+	<td>Nome do Arquivo 2</td>
+	<td>Número do Desenho 2</td>
+	<td>Data 2</td>
+	
+	<td>
+		<p>Status: <span id="etapa1-status-2">Aguardando aprovação</span></p>
+		<p><button id="etapa1-aprovar-2" disabled>Aprovar</button> <button id="etapa1-reprovar-2" disabled>Reprovar</button></p>
+		<p><a id="etapa1-download-2" href="#" download disabled>Download do arquivo aprovado</a></p>
+	</td>
+	<td>
+		<p>Status: <span id="etapa2-status-2">Aguardando aprovação</span></p>
+		<p><button id="etapa2-aprovar-2" disabled>Aprovar</button> <button id="etapa2-reprovar-2" disabled>Reprovar</button></p>
+		<p><a id="etapa2-download-2" href="#" download disabled>Download do arquivo aprovado</a></p>
+	</td>
+	<td>
+		<p>Status: <span id="etapa3-status-2">Aguardando aprovação</span></p>
+		<p><button id="etapa3-aprovar-2" disabled>Aprovar</button> <button id="etapa3-reprovar-2" disabled>Reprovar</button></p>
+		<p><a id="etapa3-download-2" href="#" download disabled>Download do arquivo aprovado</a></p>
+	</td>
+	<td>
+		<p>Status: <span id="etapa4-status-2">Aguardando aprovação</span></p>
+		<p><button id="etapa4-aprovar-2" disabled>Aprovar</button> <button id="etapa4-reprovar-2" disabled>Reprovar</button></p>
+		<p><a id="etapa4-download-2" href="#" download disabled>Download do arquivo aprovado</a></p>
+	</td>
 </tr>
 <!-- Adicione mais linhas para mais arquivos -->
 </tbody>
 </table>
 </div>
-
 
 <script src="etapa1.js"></script>
 <script src="etapa2.js"></script>
@@ -73,8 +89,4 @@
 <script src="upload.js"></script>
 </body>
 </html>
-
-
-
-
 
