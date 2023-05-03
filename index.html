@@ -22,11 +22,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>Nome do Arquivo 1</td>
-					<td>Número do Desenho 1</td>
-					<td>Data 1</td>
-					<td>
+				<td>
 						<form action="/upload" method="post" enctype="multipart/form-data">
 							<label for="file-upload">Carregue o arquivo:</label>
 							<input type="file" id="file-upload" name="file-upload" multiple>
@@ -36,6 +32,11 @@
 
 						</form>
 					</td>
+				<tr>
+					<td>Nome do Arquivo 1</td>
+					<td>Número do Desenho 1</td>
+					<td>Data 1</td>
+					
 					<td>
 						<p>Status: <span id="etapa1-status-1">Aguardando aprovação</span></p>
 						<p><button id="etapa1-aprovar-1" disabled>Aprovar</button> <button id="etapa1-reprovar-1" disabled>Reprovar</button></p>
