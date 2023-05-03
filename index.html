@@ -10,6 +10,16 @@
 	<div>
 		<h2>Arquivos para Aprovação</h2>
 		<table>
+				<td>
+						<form action="/upload" method="post" enctype="multipart/form-data">
+							<label for="file-upload">Carregue o arquivo:</label>
+							<input type="file" id="file-upload" name="file-upload" multiple>
+							<input type="submit" value="Enviar">
+						    <button id="submit-button">Enviar arquivos</button>
+
+
+						</form>
+					</td>
 			<thead>
 				<tr>
 					<th>Nome do Arquivo</th>
@@ -22,16 +32,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<td>
-						<form action="/upload" method="post" enctype="multipart/form-data">
-							<label for="file-upload">Carregue o arquivo:</label>
-							<input type="file" id="file-upload" name="file-upload" multiple>
-							<input type="submit" value="Enviar">
-						    <button id="submit-button">Enviar arquivos</button>
-
-
-						</form>
-					</td>
+			
 				<tr>
 					<td>Nome do Arquivo 1</td>
 					<td>Número do Desenho 1</td>
