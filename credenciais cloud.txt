@@ -1,0 +1,2 @@
+Path do arquivo de credenciais do Google Cloud: /Cargiilcontrole-de-projetos/woven-backbone-383702-a4338996d2b1.json
+Nome do bucket no Google Cloud: cargill-porto-franco
